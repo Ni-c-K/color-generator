@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        button {
+            color: white;
+            padding: 10px 20px;
+            /* position: absolute; */
+            background-color: rgb(255, 0, 43);
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+    </div>
+    <button>Click</button>
+
+    <script>
+        let box = document.querySelector(".box")
+        let btn = document.querySelector("button")
+
+        btn.addEventListener("click", function () {
+            let num1 = Math.floor(Math.random()*255)
+            let num2 = Math.floor(Math.random()*255)
+            let num3 = Math.floor(Math.random()*255)
+
+            box.style.backgroundColor = `rgb(${num1}, ${num2}, ${num3})`
+        })
+    </script>
+</body>
+
+</html>
